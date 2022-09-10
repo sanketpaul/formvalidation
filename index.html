@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSD Form validation</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id="success" class="alert alert-success alert-dismissible fade ">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Success!</strong> you have successfully submitted the form
+      </div>
+    <div id="faliure " class="alert alert-danger alert-dismissible fade ">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Failed!</strong> Your form has not submitted 
+
+        </div>
+
+        <div class="container" style="border:1px solid rgb(189, 123, 16)">
+            <h3 class="mt-2 p-3 bg-warning text-black rounded text-center">MSD Form Validation</h3>
+            <form class="row g-3">
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control  " id="name" placeholder="Enter your name">
+                    <div class="invalid-feedback  validname">valid name</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text"class="form-control" id="email" placeholder="Enter your email">
+                    <div class="validemail invalid-feedback"> enter Valid email</div>
+                </div>
+                <div class="form-group">
+                <label for="username">Username</label>
+                    <input type="text"class="form-control" id="username" placeholder="Enter your email">
+                    <div class="validusername  invalid-feedback">enter valid username</div>
+                    
+                </div>
+                <div class="form-group">
+                <label for="password">password</label>
+                    <input type="text"class="form-control" id="password" placeholder="create password" autocomplete="off" onkeyup="passcheck(this.value)">
+                   <div class="feedback">
+                    <p id="char">length should be gratherthan 8</p>
+                    <p id="special">atleast 1special char</p>
+                    <p id="num">atleast 1number</p>
+                    <p id="capital">atleast one capital characher</p>
+                   </div>
+                    
+                
+                </div>
+                <div class="form-group">
+                <label for="password">confirm password</label>
+                    <input type="text"class="form-control" id="cpassword" onkeyup="cpasscheck(this.value)" placeholder="create password">
+                    <div id="cpass">confirm password should be same as create password!</div>
+                </div>
+
+
+                
+              
+            </form>
+            <button type="submit" id="submit" class="btn btn-primary my-3">Submit</button>
+
+
+
+
+        </div>
+
+
+
+      
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
