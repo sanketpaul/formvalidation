@@ -1,19 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Alatsi&family=Bree+Serif&family=Caveat+Brush&family=Chewy&family=Comfortaa:wght@300;400&family=DM+Serif+Text&family=DynaPuff&family=Gentium+Book+Plus&family=Lobster+Two&family=Major+Mono+Display&family=Mali:wght@500&family=Pacifico&family=Quicksand:wght@300&family=Secular+One&family=Varela+Round&display=swap');
-    
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Alatsi&family=Bree+Serif&family=Caveat+Brush&family=Chewy&family=Comfortaa:wght@300;400&family=DM+Serif+Text&family=DynaPuff&family=Gentium+Book+Plus&family=Lobster+Two&family=Major+Mono+Display&family=Mali:wght@500&family=Pacifico&family=Quicksand:wght@300&family=Righteous&family=Secular+One&family=Varela+Round&display=swap');   
 .background{
     width: 100%;
     height:100%;
   background-color:rgb(248, 197, 197);
 }
 h3{
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Righteous', cursive;
 }
 .feedback{
     display: flex;
     justify-content: left;
     /* font-family: 'Secular One', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Righteous', cursive;
 
 }
 .border{
@@ -30,8 +32,26 @@ h3{
 
 }
 .container{
+    margin-top: 90px;
     /* background-color: rgba(233, 122, 128, 0.601); */
     /* font-family: 'Secular One', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Righteous', cursive;
     font-weight: 1000;
+}
+#submit{
+    border: none;
+    background-color:rgb(56 9 9) ;
+    color: white;
+
+   
+    padding: 5px ;
+    border-radius: 6px;
+    margin: 20px 0px;
+    margin-left: 46%;
+    
+    
+}
+#submit:active{
+    transform: translateY(5px);
 }

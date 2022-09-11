@@ -12,6 +12,7 @@ let validemail2=false;
 let validusername2=false;
 let validpassword=false;
 let validcpassword=false;
+let validmobile=false;
 
 
 name1.addEventListener('blur',()=>{
@@ -67,6 +68,22 @@ username.addEventListener('blur',()=>{
     }
 
 
+})
+let mobile=document.getElementById('mobile')
+mobile.addEventListener('blur',()=>{
+    let reg=/^[789]([0-9]){9}/
+    let str=mobile.value;
+    let result=reg.test(str)
+    if(result){
+        validmobile=true;
+        mobile.classList.add('is-valid')
+        mobile.classList.remove('is-invalid')
+
+    }
+    else{
+        mobile.classList.add('is-invalid')
+        mobile.classList.remove('is-valid')
+    }
 })
 
 
@@ -154,7 +171,7 @@ submit.addEventListener('click',(e)=>{
         <strong>Holy success!</strong> You have successfully submited the form.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`
-      data=''
+      
        
     }
     else{
