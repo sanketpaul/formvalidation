@@ -83,6 +83,7 @@ mobile.addEventListener('blur',()=>{
     else{
         mobile.classList.add('is-invalid')
         mobile.classList.remove('is-valid')
+        validmobile=false;
     }
 })
 
@@ -161,14 +162,14 @@ let cpasscheck=(data2)=>{
 let submit=document.getElementById('submit')
 submit.addEventListener('click',(e)=>{
     e.preventDefault()
-    if(validname2 && validemail2 && validusername2){
+    if(validname2 && validemail2 && validusername2 && validmobile){
         console.log('you have successfully submitting the form')
         // let success=document.getElementById('success')
         // success.classList.add('show')
         // success.classList.remove('alert-warning')
         // success.classList.add('alert-success')
         document.getElementsByClassName('submitresult')[0].innerHTML=`<div  id="success" class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Holy success!</strong> You have successfully submited the form.
+        <strong> success!</strong> You have successfully submited the form.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`
       
@@ -180,7 +181,7 @@ submit.addEventListener('click',(e)=>{
         // success.classList.remove('alert-success')
         // success.classList.add('alert-warning')
         document.getElementsByClassName('submitresult')[0].innerHTML=`<div  id="success" class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy Uffs!</strong> Something went wrong please check the form.
+        <strong> Uffs!</strong> Something went wrong please check the form.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`
 
